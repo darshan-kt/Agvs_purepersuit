@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="max_speed" default="0.5"/>
+  <arg name="max_angle" default="0.8"/>
+
+
+  <!-- Launch ackermann_drive_joyop to teleoperate robots with ackermann steering -->
+  <node name="ackermann_drive_teleop" type="keyop.py" pkg="ackermann_drive_teleop" output='screen' args="$(arg max_speed) $(arg max_angle)"/>
+
+
+</launch>
+

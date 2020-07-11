@@ -1,0 +1,23 @@
+  <launch>
+  
+  <!-- start agvs_controls -->
+    <include file="$(find agvs_robot_control)/launch/agvs_robot_control.launch"/>
+
+
+  <!-- start agvs_mapserver -->
+    <include file="$(find agvs_complete)/launch/map_server.launch"/>
+
+  <!-- start agvs_amcl-->
+    <include file="$(find agvs_complete)/launch/amcl_diff_2.launch"/>
+
+<!-- start pure pursuit planner-->
+    <include file="$(find purepursuit_planner)/launch/purepursuit.launch"/>
+
+<!-- start purepursuit marker-->
+    <include file="$(find purepursuit_planner)/launch/purepursuit_marker.launch"/>
+
+<!-- Run rviz -->
+  <node name="rviz" pkg="rviz" type="rviz" />
+
+
+</launch>

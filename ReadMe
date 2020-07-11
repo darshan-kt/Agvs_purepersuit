@@ -1,0 +1,25 @@
+Execute the below launch files to get work on agv using Pure pursuit planner.
+
+roslaunch agvs_gazebo agvs.launch
+
+roslaunch agvs_robot_control agvs_robot_control.launch
+
+// rosrun tf static_transform_publisher 0 0 0 0 0 0 /map /odom 100
+
+roslaunch agvs_complete map_server.launch 
+
+roslaunch agvs_complete amcl_diff_2.launch
+
+rosrun rviz rviz
+
+roslaunch purepursuit_planner purepursuit.launch
+
+ roslaunch purepursuit_planner purepursuit_marker.launch 
+
+
+
+  (or)  Just follow 2 steps
+
+roslaunch agvs_gazebo agvs.launch
+
+roslaunch agvs_complete agv_navigation.launch 
