@@ -15,35 +15,35 @@ This package enables autonomous navigation for an Automated Guided Vehicle (AGV)
 
 To launch all components manually for complete control, execute the following in order:
 
-# 1. Launch the AGV simulation
+Launch the AGV simulation
 ```bash
 roslaunch agvs_gazebo agvs.launch
 ```
-# 2. Start robot control nodes
+Start robot control nodes
 ```bash
 roslaunch agvs_robot_control agvs_robot_control.launch
 ```
-# 3. Optional: Static transform between map and odom (if needed)
+Optional: Static transform between map and odom (if needed)
 ```bash
 rosrun tf static_transform_publisher 0 0 0 0 0 0 /map /odom 100
 ```
-# 4. Launch the map server
+Launch the map server
 ```bash
 roslaunch agvs_complete map_server.launch
 ```
-# 5. Start localization using AMCL
+Start localization using AMCL
 ```bash
 roslaunch agvs_complete amcl_diff_2.launch
 ```
-# 6. Start RViz for visualization
+Start RViz for visualization
 ```bash
 rosrun rviz rviz
 ```
-# 7. Launch the Pure Pursuit planner
+Launch the Pure Pursuit planner
 ```bash
 roslaunch purepursuit_planner purepursuit.launch
 ```
-# 8. Launch visualization markers for the planner
+Launch visualization markers for the planner
 ```bash
 roslaunch purepursuit_planner purepursuit_marker.launch
 ```
@@ -51,11 +51,11 @@ roslaunch purepursuit_planner purepursuit_marker.launch
 
 To launch the full AGV navigation system with a single command sequence:
 
-# 1. Launch simulation and robot
+Launch simulation and robot
 ```bash
 roslaunch agvs_gazebo agvs.launch
 ```
-# 2. Launch full navigation stack with Pure Pursuit
+Launch full navigation stack with Pure Pursuit
 ```bash
 roslaunch agvs_complete agv_navigation.launch
 ```
